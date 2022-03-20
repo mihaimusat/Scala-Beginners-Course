@@ -5,23 +5,39 @@ object ValuesVariablesTypes extends App {
   val x: Int = 42
   println(x)
 
-  // VALS ARE IMMUTABLE
+  val str: String = "hello"
+  println(str)
 
-  // COMPILER can infer types
+  val flag: Boolean = true
+  println(flag)
 
-  val aString: String = "hello"
-  val anotherString = "goodbye"
+  val ch: Char = 'a'
+  println(ch)
 
-  val aBoolean: Boolean = false
-  val aChar: Char = 'a'
-  val anInt: Int = x
-  val aShort: Short = 4613
-  val aLong: Long = 5273985273895237L
-  val aFloat: Float = 2.0f
-  val aDouble: Double = 3.14
+  val shortVal: Short = 777
+  println(shortVal)
 
-  // variables
-  var aVariable: Int = 4
+  val longVal: Long = 4352352634242L
+  println(longVal)
 
-  aVariable = 5 // side effects
+  val floatVal: Float = 2.0f
+  println(floatVal)
+
+  val doubleVal: Double = 3.14
+  println(doubleVal)
+
+  /**
+   * Obs:
+   * 1. pentru values, se poate infera tipul la compile time (e.g. val x = 42 nu va da eroare de compilare)
+   * 2. values sunt imutabile (e.g. nu pot sa fac o reasignare de tipul x = 2)
+   */
+
+  var firstVar: Int = 2
+  firstVar = 5
+  println(firstVar)
+
+  /**
+   * Obs:
+   * 1. variables isi pot modifica valoarea pe parcursul executiei programului (in FP, se numesc side effects)
+   */
 }
